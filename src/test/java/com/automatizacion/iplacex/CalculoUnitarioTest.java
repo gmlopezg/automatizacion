@@ -7,6 +7,6 @@ public class CalculoUnitarioTest {
     @Test
     public void testSumaSimple() {
         // Una prueba unitaria pura: solo lógica interna
-        assertEquals(11, 5 + 5, "La suma básica debería funcionar");
+        assertEquals(10, 5 + 5, "La suma básica debería funcionar");
     }
 }
