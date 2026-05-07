@@ -7,9 +7,9 @@ on:
     branches: [develop]
 
 jobs:
-  build:
+  # ETAPA 1 Y 2: CONSTRUCCIÓN Y PRUEBAS
+  build-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Descargar codigo
         uses: actions/checkout@v3
@@ -21,5 +21,16 @@ jobs:
           distribution: "temurin"
           cache: "maven"
 
-      - name: Ejecutar Build y Pruebas
+      - name: Ejecutar Pruebas (Unit, Integration, Acceptance)
         run: mvn test
+
+  # ETAPA 3: DESPLIEGUE (Solo ocurre si las pruebas pasan)
+  deploy:
+    needs: build-and-test # Este es el comando por si el test falla, no hay despliegue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simular Despliegue en Ambiente de Pruebas (Staging)
+        run: |
+          echo "Iniciando despliegue en ambiente de pruebas..."
+          echo "Copiando binarios al servidor..."
+          echo "Despliegue completado con éxito."
