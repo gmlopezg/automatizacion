@@ -1,15 +1,28 @@
-# Proyecto de Automatización de Pruebas - Iplacex
+# Proyecto de Automatización de Pruebas - Examen Iplacex
 
-## Descripción
+Este proyecto implementa un ecosistema completo de **Integración Continua (CI) y Despliegue Continuo (CD)** utilizando Java 21, Maven, Selenium y GitHub Actions.
 
-Este proyecto implementa una suite de pruebas automatizadas utilizando **Java**, **Maven** y **JUnit 5**, diseñada para integrarse en un pipeline de CI/CD.
+## 🚀 Características del Proyecto
 
-## Actividad 1: Configuración de Base
+- **Gestión de Dependencias:** Configuración robusta en Maven (`pom.xml`).
+- **Suite de Pruebas:** \* Pruebas Unitarias (Lógica de cálculos).
+  - Pruebas de Integración (Selenium).
+  - Pruebas de Aceptación (Validación de reglas de negocio).
+- **Pipeline de CI/CD:** Automatización mediante GitHub Actions con etapas de construcción, testeo y despliegue.
+- **Mecanismos de Seguridad:** Implementación de **Rollback automático** en caso de fallo en las pruebas.
 
-- **Estrategia de Ramas:** Se implementó **GitFlow**, utilizando una rama `master` para versiones estables y `develop` para la integración de nuevas funcionalidades.
-- **Gestión de Dependencias:** Se utiliza **Maven** (`pom.xml`) para gestionar las librerías de JUnit 5 y Selenium.
+## 🛠️ Tecnologías Utilizadas
 
-## Cómo ejecutar las pruebas localmente
+- **Lenguaje:** Java 21
+- **Build Tool:** Maven 3.9+
+- **Testing:** JUnit 5 & Selenium WebDriver
+- **CI/CD:** GitHub Actions
+- **Control de Versiones:** Git (Flujo GitFlow con ramas master y develop)
 
-1. Tener instalado Maven y Java 21.
-2. Ejecutar el comando: `mvn test`
+## 📋 Cómo ejecutar las pruebas localmente
+
+Para ejecutar la suite completa de pruebas en su máquina local, utilice el comando:
+
+```bash
+mvn test
+```
